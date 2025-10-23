@@ -82,6 +82,16 @@ in
     type.type = types.enum [ "derivation" ];
   });
   config = {
+    derivationArgs = lib.mapAttrs (_: lib.mkOptionDefault) {
+      # These make more sense for local deveploment as otherwise every time
+      # one edits the a script, nix run|build will hit check all caches
+      # before actually building it. If one is running CI with empy /nix/store
+      # and wants to always fetch from cache, one can add
+      # [always-allow-substitutes](https://nix.dev/manual/nix/2.24/command-ref/conf-file.html#conf-always-allow-substitutes)
+      # to their nix.conf.
+      preferLocalBuild = true;
+      allowSubstitutes = false;
+    };
     text = lib.mkIf (config.dir != null) (
       lib.mkDefault (builtins.readFile (config.dir + "/${config.name}.sh"))
     );
