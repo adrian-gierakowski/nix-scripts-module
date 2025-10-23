@@ -20,11 +20,11 @@
     },
     "nix-scripts-module": {
       "locked": {
-        "lastModified": 1761155331,
-        "narHash": "sha256-w32VM5d3VC3LeqsRYY912aX7NY2rcc0+k2fO0wcbp+E=",
+        "lastModified": 1761201680,
+        "narHash": "sha256-i1LY34mytWkxFpR5LS+PTFJpml9EusQ9VMq697PR9fg=",
         "owner": "adrian-gierakowski",
         "repo": "nix-scripts-module",
-        "rev": "cad35950deacca8570061fdcf134364def0d9304",
+        "rev": "44cf4da8d8eaffb5fe2dc8176ae7f2af6be5de62",
         "type": "github"
       },
       "original": {

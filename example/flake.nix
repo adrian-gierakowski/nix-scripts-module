@@ -26,13 +26,7 @@
           ...
         }:
         {
-          scriptsDefaults = {
-            dir = ./scripts;
-            derivationArgs = {
-              preferLocalBuild = lib.mkDefault true;
-              allowSubstitutes = lib.mkDefault false;
-            };
-          };
+          scriptsDefaults.dir = ./scripts;
           scripts = {
             # Simplest way to define a script with just a in inline bash snippet.
             hello = ''echo Hello "''${1:-scripts}!"'';
