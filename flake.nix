@@ -7,7 +7,7 @@
       description = "Example flake using nix-scripts-module";
       path = builtins.path {
         path = ./example;
-        filter = path: _: baseNameOf path == "flake.nix";
+        filter = path: _: baseNameOf path != "flake.lock";
       };
     };
   };
